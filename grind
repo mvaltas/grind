@@ -30,7 +30,8 @@ function warn() {
   in_yellow "WARN: ${1}"
 }
 
-# accept '-d' as a debug flag
+# accept '-d' or '--debug' as a debug flag
+# accept '-v' or '--verbose' as verbose flag
 zparseopts -D -E - d=DEBUG -debug=DEBUG v=GRIND_VERBOSE -verbose=GRIND_VERBOSE
 
 # also accept GRIND_DEBUG=true as debug
