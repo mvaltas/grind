@@ -29,19 +29,19 @@ typeset -ga _BREW_TAP_REQUESTED
 function _brew_pkg_installed() {
   _BREW_PKG_INSTALLED="${_BREW_PKG_INSTALLED:-$(brew list --formula)}"
   log "brew_packages_list: ${_BREW_PKG_INSTALLED}"
-  grep -qE "^${1}$" <(echo "${_BREW_PKG_INSTALLED}")
+  grep -q "^${1}$" <(echo "${_BREW_PKG_INSTALLED}")
 }
 
 function _brew_cask_installed() {
   _BREW_CASK_INSTALLED="${_BREW_CASK_INSTALLED:-$(brew list --cask)}"
   log "brew_casks_list: ${_BREW_CASK_INSTALLED}"
-  grep -qE "^${1}$" <(echo "${_BREW_CASK_INSTALLED}")
+  grep -q "^${1}$" <(echo "${_BREW_CASK_INSTALLED}")
 }
 
 function _brew_tap_installed() {
   _BREW_TAP_INSTALLED="${_BREW_TAP_INSTALLED:-$(brew tap)}"
   log "brew_tap_list: ${_BREW_TAP_INSTALLED}"
-  grep -qE "^${1}$" <(echo "${_BREW_TAP_INSTALLED}")
+  grep -q "^${1}$" <(echo "${_BREW_TAP_INSTALLED}")
 }
 
 function brew_pkg() {
