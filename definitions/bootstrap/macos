@@ -12,7 +12,7 @@ function _msg() {
 
 function install_homebrew() {
   _msg "Installing homebrew"
-  /usr/bin/ruby -e "`curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install`"
+  /usr/bin/ruby -e "`curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh`"
 }
 
 function xcode_cli_installed() {
